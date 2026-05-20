@@ -1,3 +1,10 @@
 *{
-  background-color: red;
+  background-color: rgb(230, 227, 227);
+}
+button{
+  width: 200px;
+  padding: 10px;
+  height: 100px;
+
+
 }
