@@ -32,6 +32,7 @@ function App() {
 
   const copyRef = useRef(null)
   const copyToClipboard = useCallback(() =>{
+    copyRef.current?.select();
     window.navigator.clipboard.writeText(password)
     console.log("copied")
     copyRef.current.innerText = "copied"
@@ -46,11 +47,11 @@ function App() {
        placeholder='Your Password'
        readOnly
        value={password}
-
+       ref = {copyRef}
        />
        <button className='w-s bg-amber-800 rounded-lg mx-2 my-2 p-2'
        onClick={copyToClipboard}
-       ref = {copyRef}>copy</button>
+       >copy</button>
       
     </div>
     <div className='flex flex-row p-2 m-2'>
